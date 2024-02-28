@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config></context:annotation-config>
+    <bean name="s1" class="LifeCycle.Samosa" init-method="init" destroy-method="destroy">
+        <property name="price" value="20"/>
+    </bean>
+    <bean name="p1" class="LifeCycle.Pepsi">
+        <property name="price" value="50"/>
+    </bean>
+
+    <bean class="LifeCycle.Course" name="course">
+        <property name="name" value="C++"/>
+    </bean>
+
+</beans>

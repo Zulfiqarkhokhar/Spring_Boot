@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    injecting collections-->
+
+    <bean name="Emp1" class="Collection.Emp">
+
+        <property name="name" value="Zulfiqar"/>
+        <property name="phones">
+            <list>
+                <value>03403690911</value>
+                <value>03240097984</value>
+                <value>03160374499</value>
+            </list>
+        </property>
+
+        <property name="addresses">
+            <set>
+                <value>Bakers Street London</value>
+                <value>New Delhi India</value>
+                <value>Shetaan Galli Lahore</value>
+            </set>
+        </property>
+
+        <property name="courses">
+
+            <map>
+                <entry key="Java" value="4 credit"/>
+                <entry key="DBMS" value="4 credit"/>
+                <entry key="Web Engineering" value="3 credit"/>
+            </map>
+        </property>
+
+        <property name="props">
+            <props>
+                <prop key="email">zulfiqarali.bscssef20@iba-suk.edu.pk</prop>
+                <prop key="CMS">023-20-0063</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <util:list list-class="java.util.LinkedList" id="friends">
+        <value>Yasir Ali</value>
+        <value>Ameer Ali</value>
+        <value>Sajid Ali</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Spring Boot" value="5000"/>
+        <entry key="React JS" value="3000"/>
+        <entry key="Django" value="2000"/>
+    </util:map>
+
+    <util:properties id="credential">
+        <prop key="Username">ZulfiqarKhokhar</prop>
+        <prop key="Password">1234</prop>
+        <prop key="Email">zulfiqarali.bscssef20@iba-suk.edu.pk</prop>
+    </util:properties>
+
+    <bean class="StandAloneCollection.Person" name="person">
+        <property name="friends" ref="friends"/>
+        <property name="feeStructure" ref="fees"/>
+        <property name="properties" ref="credential"/>
+
+    </bean>
+
+</beans>
